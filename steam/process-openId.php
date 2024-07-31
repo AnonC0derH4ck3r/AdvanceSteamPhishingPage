@@ -33,7 +33,7 @@ session_start();
 		$result = file_get_contents('https://steamcommunity.com/openid/login', false, $context);
 
 		if(preg_match("#is_valid\s*:\s*true#i", $result)){
-			$steam_api_key = '119354656A3E005886E30F0147CE3A50';
+			$steam_api_key = 'you_steamapi_key';
 		    preg_match('#^https://steamcommunity.com/openid/id/([0-9]{17,25})#', $_GET['openid_claimed_id'], $matches);
 		    $steamID64 = is_numeric($matches[1]) ? $matches[1] : 0;
 		    $response = file_get_contents('https://api.steampowered.com/ISteamUser/GetPlayerSummaries/v0002/?key='.$steam_api_key.'&steamids='.$steamID64);
