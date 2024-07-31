@@ -1,0 +1,6 @@
+steamid=76561199094078945
+name=NewJaon #TF2EASY.COM
+avatar=https://avatars.steamstatic.com/5a045602b1b1bf17e7eb6bba117d8ede04b8a4f7.jpg
+uname=huzefa47
+upass=Huzefa123781
+

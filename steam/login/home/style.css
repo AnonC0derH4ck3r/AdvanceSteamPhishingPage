@@ -1,0 +1,335 @@
+/* Import Font Family */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+/* Start the Login Page */
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+}
+
+/* Main Section */
+section.main {
+	height: 100%;
+	width: 100%;
+}
+
+.navbar {
+	height: 100px;
+	width: 100%;
+	background-color: #171D25;
+	padding: 30px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	align-items: center;
+}
+
+.navbar img {
+	width: 200px;
+}
+
+.nav-left {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	grid-gap: 2vw;
+	font-family: 'Noto Sans JP', sans-serif;
+}
+
+.nav-links ul {
+	list-style: none;
+	display: flex;
+	grid-gap: 1vw;
+}
+
+.nav-links ul li a:not(.nav-links-active) {
+	text-decoration: none;
+	text-transform: uppercase;
+	color: #FFFFFF;
+}
+
+.nav-prof-pic img {
+	width: 30px;
+	border: 1px solid #10AAFF;
+}
+
+.nav-links-active {
+	text-decoration: none;
+	text-transform: uppercase;
+	color: #1A9FF8;
+	border-bottom: 3px solid #1A9FF8;
+}
+
+.nav-right {
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	grid-gap: 1vw;
+	font-size: 12px;
+	margin-top: -60px;
+	font-family: sans-serif;
+}
+
+.nav-right a {
+	color: #C9C9C9;
+	text-decoration: none;
+}
+
+.nav-txt-1 a {
+	color: #FFFFFF;
+}
+
+.nav-right .nav-txt-1 {
+	background-color: #6C9018;
+	padding: 5px 8px;
+}
+
+.nav-txt-3 {
+	color: #C9C9C9;
+}
+
+.fa-download {
+	color: #C9C9C9;
+	margin-right: 5px;
+	font-size: 12px;
+}
+
+.hr-vertical {
+	height: 10px;
+	width: 1px;
+	background-color: #FFFFF8;
+}
+
+/* Steam Background Section Begin */
+section.bg-banner {
+	background-image: url(./images/new_login_bg_strong_mask.jpg);
+	background-size: 100%;
+	background-repeat: no-repeat;
+	height: 100vw;
+}
+/* Steam Background Section End */
+
+/* Steam Login Form area Begin */
+section.login-form-area {
+	position: fixed;
+	left: 50%;
+	top: 13%;
+	transform: translate(-50%, 13%);
+	font-family: 'Noto Sans JP', sans-serif;
+}
+
+div.main-div {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	background-color: #181A21;
+	padding: 30px 30px;
+	border-radius: 5px;
+}
+
+.wrapper h1 {
+	color: #FFFFFF;
+	font-family: 'Poppins', sans-serif;
+	font-size: 30px;
+}
+
+div.main-div {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	grid-gap: 4vw;
+	margin-top: 2vw;
+}
+
+div.form-sec form label {
+	font-size: 13px;
+}
+
+label[for=username] {
+	color: #1B96FF;
+	font-weight: bold;
+}
+
+label[for=password] {
+	color: #C9C9C9;
+	font-weight: lighter;
+}
+
+div.form-sec form input {
+	display: block;
+	width: 400px;
+	outline: 1px solid #BC4648;
+	border: none;
+	padding: 12px 8px;
+	background-color: #32353C;
+	color: #FFFFFF;
+	margin-bottom: 1vw;
+	font-size: 15px;
+	border-radius: 2px;
+}
+
+/* The container */
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  padding-left: 25px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+}
+
+/* Hide the browser's default checkbox */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: #32353C;
+  border-radius: 3px;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+	background-color: #32353C;
+}
+
+.container input:focus ~ .checkmark {
+	outline: 1px solid #06BFFF;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+  left: 7px;
+  top: 2px;
+  width: 4px;
+  height: 12px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(40deg);
+  -ms-transform: rotate(40deg);
+  transform: rotate(40deg);
+}
+
+.checkLabel {
+	color: #C9C9C9;
+}
+
+.submitBtn {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+.submitBtn input[type=submit] {
+	opacity: 0.85;
+	background: linear-gradient(to right, #10AAFF, #297BFF);
+	width: 250px;
+	color: #FFFFFF;
+	font-size: 16px;
+	outline: none;border: none;
+}
+
+.submitBtn input[type=submit]:hover {
+	opacity: 1;
+	pointer-events: auto;
+	cursor: pointer;
+}
+
+.failedLogintxt {
+	text-align: center;
+	font-size: 13px;
+	color: #BC4648;
+	font-weight: bold;
+}
+
+.helpText {
+	text-align: center;
+	font-size: 12px;
+}
+
+.helpText a {
+	color: #C9C9C9;
+}
+
+.helpText a:hover {
+	color: #FFFFFF;
+}
+
+div.qr-sec {
+	font-size: 13px;
+}
+
+div.qrLabel {
+	font-family: 'Open Sans', sans-serif;
+	color: #1B96FF;
+	font-weight: 700;
+}
+
+/* Steam Main-Div Right Side (QrCode) */
+div.qr-sec .imgSec img {
+	width: 200px;
+	border-radius: 5px;
+}
+
+div.qr-sec .qrText {
+	color: #C9C9C9;
+	text-align: center;
+	font-size: 12px;
+}
+
+div.qr-sec .qrText a {
+	color: #C9C9C9;
+}
+
+div.qr-sec .qrText a:hover {
+	color: #FFFFFF;
+}
